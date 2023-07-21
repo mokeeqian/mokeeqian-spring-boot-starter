@@ -45,7 +45,7 @@ public class DynamicMybatisPlugin implements Interceptor {
 
         // 获取自定义注解，判断是否需要进行分表
         String id = mappedStatement.getId();
-        String className = id.substring(0, id.indexOf("."));
+        String className = id.substring(0, id.lastIndexOf("."));
         Class<?> clazz = Class.forName(className);
         DBRouterStrategy dbRouterStrategy = clazz.getAnnotation(DBRouterStrategy.class);
 

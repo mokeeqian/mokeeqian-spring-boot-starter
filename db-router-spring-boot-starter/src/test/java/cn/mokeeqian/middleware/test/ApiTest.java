@@ -19,9 +19,9 @@ public class ApiTest {
 
     @Test
     public void test_db_hash() {
-        String key = "mokeeqian";
+        String key = "xxxx";
 
-        int dbCount = 2, tbCount = 32;
+        int dbCount = 2, tbCount = 4;
         int size = dbCount * tbCount;
         // 散列，参考HashMap (n-1) & hash
         int idx = (size - 1) & (key.hashCode() ^ (key.hashCode() >>> 16));
